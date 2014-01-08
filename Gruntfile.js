@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
 
     // Load Grunt tasks declared in the package.json file
     require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -13,8 +13,7 @@ module.exports = function (grunt) {
                     compress: false
                 },
                 files: {
-                  'main.css': 'stylus/main.styl',
-                  'ie8.css': 'stylus/ie8.styl'
+                    'css/main.css': 'styl/main.styl'
                 }
             }
         },
@@ -58,7 +57,7 @@ module.exports = function (grunt) {
         }
         //------------------------------------------------------------
     });
-    
+
     // Инициализация плагинов, таски которых мы вызываем
     grunt.registerTask('run', ['connect', 'watch']);
 };
